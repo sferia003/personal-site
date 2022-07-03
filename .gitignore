@@ -1,3 +1,6 @@
+# Default
 node_modules
 build
 
+# IDE Specific
+.vscode
