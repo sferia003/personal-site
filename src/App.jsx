@@ -16,7 +16,7 @@ const theme = createTheme({
   typography: {
     h1: {
       fontWeight: 900,
-      fontSize: 75,
+      fontSize: 60,
     },
     h3: {
       fontWeight: 900
@@ -51,7 +51,7 @@ const App = () => {
               color: '#191926'
             },
             number: {
-              value: (isMobile) ? 15 : 100
+              value: (isMobile) ? 25 : 100
             }
           },
         }} />

@@ -11,7 +11,7 @@ const Icon = ({ icon: Icon, open, redirect }) => {
                 window.location.href = redirect;
             }
         }}>
-            <Icon sx={{ fontSize: 50 }} />
+            <Icon sx={{ fontSize: 40 }} />
         </IconButton>);
 };
 
