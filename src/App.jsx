@@ -9,6 +9,7 @@ import { ThemeProvider } from '@emotion/react';
 import { loadLinksPreset } from "tsparticles-preset-links";
 import Particles from 'react-tsparticles';
 
+import { isMobile } from 'react-device-detect';
 import Icons from './Icons';
 
 const theme = createTheme({
@@ -16,6 +17,9 @@ const theme = createTheme({
     h1: {
       fontWeight: 900,
       fontSize: 75,
+    },
+    h3: {
+      fontWeight: 900
     }
   },
   palette: {
@@ -45,14 +49,17 @@ const App = () => {
             color: '#000000',
             links: {
               color: '#191926'
+            },
+            number: {
+              value: (isMobile) ? 15 : 100
             }
-          }
+          },
         }} />
       </Box>
       <Button />
       <Grid container justifyContent={'center'} alignItems={'center'} position='absolute' minHeight={'100vh'}>
         <Grid item>
-          <Typography variant="h1">
+          <Typography variant={(isMobile) ? 'h3' : 'h1'}>
             Stephen Feria
           </Typography>
           <Icons />
