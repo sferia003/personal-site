@@ -15,7 +15,7 @@ const theme = createTheme({
   typography: {
     fontFamily: 'Varela Round',
     h3: {
-        fontSize: 50
+        fontSize: 40
     },
     h1: {
         fontSize: 80
@@ -38,7 +38,7 @@ const App = () => {
     <ThemeProvider theme={theme}>
       <>
           <Grid container direction='column' alignItems='center' justifyContent='flex-end'
-          style={{ minHeight: '60vh' }}>    
+          style={{ minHeight: (isMobile) ? '45vh' : '60vh' }}>    
             <Grid item xs={'12'}>
               <Typography variant={(isMobile) ? 'h3' : 'h1'}>
                 Stephen Feria
