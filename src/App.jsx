@@ -1,71 +1,112 @@
-import * as React from 'react';
+import * as React from "react";
 
-import { Box, Grid, Typography } from '@mui/material';
-import { createTheme } from '@mui/material/styles';
-import { ThemeProvider } from '@emotion/react';
-import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
+import { Grid, Typography } from "@mui/material";
+import { createTheme } from "@mui/material/styles";
+import { ThemeProvider } from "@emotion/react";
+import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
 import "@fontsource/varela-round";
 
-import Urls from './Urls.jsx';
-import MobileUrls from './MobileUrls.jsx';
-
-import { isMobile } from 'react-device-detect';
+import Urls from "./Urls.jsx";
 
 const theme = createTheme({
-  typography: {
-    fontFamily: 'Varela Round',
-    h3: {
-        fontSize: 40
+  breakpoints: {
+    values: {
+      xs: 0,
+      sm: 600,
+      md: 900,
+      lg: 1200,
+      xl: 1536,
+      xxl: 1900,
     },
-    h1: {
-        fontSize: 80
-    }
-
+  },
+  typography: {
+    fontFamily: "Varela Round",
   },
   palette: {
     primary: {
-      main: '#ffffff'
+      main: "#ffffff",
     },
     secondary: {
-      main: '#000000'
-    }
+      main: "#000000",
+    },
   },
 });
 
 const App = () => {
+  React.useEffect(() => {
+    document.body.style.overflow = "hidden";
+  });
 
   return (
     <ThemeProvider theme={theme}>
       <>
-          <Grid container direction='column' alignItems='center' justifyContent='flex-end'
-          style={{ minHeight: (isMobile) ? '45vh' : '60vh' }}>    
-            <Grid item xs={'12'}>
-              <Typography variant={(isMobile) ? 'h3' : 'h1'}>
-                Stephen Feria
-              </Typography>
-            </Grid>
-            <Grid item xs={'12'}>
-                <MoreHorizIcon sx={{fontSize: 60}}/>
-            </Grid>
-            <Grid item xs={'12'}>
-              <Typography variant={'h4'}>
-                I build software.
-              </Typography>
-            </Grid>
+        <Grid
+          container
+          direction="column"
+          alignItems="center"
+          justifyContent="center"
+          sx={{ minHeight: { xs: "85vh", sm: "85vh", md: "90vh" } }}
+        >
+          <Grid item xs={"12"}>
+            <Typography
+              sx={{
+                fontSize: {
+                  xs: "2.5rem",
+                  sm: "3.5rem",
+                  md: "5rem",
+                  lg: "7rem",
+                  xl: "9rem",
+                  xxl: "10rem",
+                },
+              }}
+            >
+              Stephen Feria
+            </Typography>
           </Grid>
-      { !isMobile && <Grid container alignItems='flex-end' justifyContent='center' style={{ minHeight: '35vh' }}>
-            <Grid item>  
-                <Urls />
-            </Grid>
-      </Grid> }
-      { isMobile && 
-              <>
-                <Box sx={{height: '10rem'}} />
-                <MobileUrls /> 
-              </>}
+          <Grid item xs={"12"}>
+            <MoreHorizIcon
+              sx={{
+                fontSize: {
+                  xs: "1.5rem",
+                  sm: "3rem",
+                  md: "3rem",
+                  lg: "5rem",
+                  xl: "7rem",
+                  xxl: "8rem",
+                },
+              }}
+            />
+          </Grid>
+          <Grid item xs={"12"}>
+            <Typography
+              sx={{
+                fontSize: {
+                  xs: "1.5rem",
+                  sm: "2rem",
+                  md: "3rem",
+                  lg: "3.5rem",
+                  xl: "4rem",
+                  xxl: "5rem",
+                },
+              }}
+            >
+              I build software.
+            </Typography>
+          </Grid>
+        </Grid>
+        <Grid
+          container
+          alignItems="flex-start"
+          justifyContent="space-evenly"
+          sx={{ minHeight: { xs: "15vh", sm: "15vh", md: "10vh" } }}
+        >
+          <Grid item>
+            <Urls />
+          </Grid>
+        </Grid>
       </>
     </ThemeProvider>
   );
-}
+};
 
 export default App;

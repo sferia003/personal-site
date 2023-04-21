@@ -1,0 +1,7 @@
+# Default
+node_modules
+build
+.github
+
+# IDE Specific
+.vscode
