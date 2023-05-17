@@ -45,7 +45,7 @@ const App = () => {
           direction="column"
           alignItems="center"
           justifyContent="center"
-          sx={{ minHeight: { xs: "85vh", sm: "85vh", md: "90vh" } }}
+          sx={{ minHeight: { xs: "80vh", md: "90vh" } }}
         >
           <Grid item xs={"12"}>
             <Typography
@@ -90,7 +90,7 @@ const App = () => {
                 },
               }}
             >
-              I build software.
+              I build software
             </Typography>
           </Grid>
         </Grid>
@@ -98,7 +98,7 @@ const App = () => {
           container
           alignItems="flex-start"
           justifyContent="space-evenly"
-          sx={{ minHeight: { xs: "15vh", sm: "15vh", md: "10vh" } }}
+          sx={{ minHeight: { xs: "20vh", md: "10vh" } }}
         >
           <Grid item>
             <Urls />

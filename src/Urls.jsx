@@ -10,6 +10,7 @@ const Urls = () => {
       style={{ minWidth: "100vw" }}
       alignItems="center"
       justifyContent="space-evenly"
+      rowSpacing={1}
     >
       <Grid item xs="12" md="4">
         <Url url="sferia003 [AT] gmail [DOT] com" />

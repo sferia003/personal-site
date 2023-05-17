@@ -13,7 +13,7 @@ const Url = ({ url }) => {
             md: "1rem",
             lg: "1.25rem",
             xl: "1.75rem",
-            xxl: "2rem",
+            xxl: "2.25rem",
           },
         }}
       >
