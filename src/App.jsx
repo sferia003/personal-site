@@ -13,7 +13,8 @@ const theme = createTheme({
   breakpoints: {
     values: {
       xs: 0,
-      sm: 600,
+      sm: 400,
+      in: 600,
       md: 900,
       lg: 1200,
       xl: 1536,
@@ -54,6 +55,7 @@ const App = () => {
                 fontSize: {
                   xs: "2.5rem",
                   sm: "3.5rem",
+                  in: "4rem",
                   md: "5rem",
                   lg: "7rem",
                   xl: "9rem",
@@ -84,6 +86,7 @@ const App = () => {
                 fontSize: {
                   xs: "1.5rem",
                   sm: "2rem",
+                  in: "2.5rem",
                   md: "3rem",
                   lg: "3.5rem",
                   xl: "4rem",

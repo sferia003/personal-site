@@ -8,8 +8,9 @@ const Url = ({ url }) => {
       <Typography
         sx={{
           fontSize: {
-            xs: "0.75rem",
-            sm: "1.25rem",
+            xs: "0.85rem",
+            sm: "1rem",
+            in: "1.25rem",
             md: "1rem",
             lg: "1.25rem",
             xl: "1.75rem",
