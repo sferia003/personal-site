@@ -5,7 +5,6 @@ import { createTheme } from "@mui/material/styles";
 import { ThemeProvider } from "@emotion/react";
 import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
 import "@fontsource/varela-round";
-import disableScroll from "disable-scroll";
 
 import Urls from "./Urls.jsx";
 
@@ -35,9 +34,6 @@ const theme = createTheme({
 });
 
 const App = () => {
-  React.useEffect(() => {
-    disableScroll.on();
-  });
 
   return (
     <ThemeProvider theme={theme}>
