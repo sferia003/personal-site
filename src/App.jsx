@@ -25,10 +25,13 @@ const theme = createTheme({
   breakpoints: {
     values: {
       xs: 0,
+      ss: 400,
+      ms: 600,
       sm: 700,
       md: 900,
       lg: 1200,
       xl: 1536,
+      xll: 1900
     },
   },
 });
@@ -41,12 +44,12 @@ const App = () => {
       <ThemeProvider theme={theme}>
       <ImageContainer>
        <TextOverlay>
-        <Card variant='outlined' sx={{minWidth: '15em', maxWidth: '45em', backgroundColor: '#FFFFFF'}}>
+        <Card variant='outlined' sx={{minWidth: '15em', maxWidth: '65em', backgroundColor: '#FFFFFF'}}>
             <CardContent>
-                <Typography sx={{paddingBottom: '1em', color: '#313335', fontSize: {xs: '1.5em', sm: '2em'}}} variant="h4">{name}</Typography>
-                <Typography sx={{paddingBottom: '0.5em', fontSize: {xs: '0.5em', sm: '1em'}}}variant="body2">{description}</Typography>
+                <Typography sx={{paddingBottom: '1em', color: '#313335', fontSize: {xs: '1.5em', ss: '1.75em', sm: '2em', lg: '2.5em', xll: '3.5em'}}} variant="h4">{name}</Typography>
+                <Typography sx={{paddingBottom: '0.5em', fontSize: {xs: '0.5em', ss: '.7em', sm: '1em', lg: '1.5em', xll: '1.75em'}}}variant="body2">{description}</Typography>
                 <Divider sx={{marginBottom: '0.5em'}} />
-                <Stack sx={{justifyContent: 'center', fontSize: {xs: '0.5em', sm: '1em'}}} direction='row' spacing={2}>
+                <Stack sx={{justifyContent: 'center', fontSize: {xs: '0.5em', ss: '.7em', sm: '1em', lg: '1.5em', xll: '1.75em'}}} direction='row' spacing={2}>
                     <Link underline='hover' color='#313335' href="mailto:sferia003@gmail.com">email</Link>
                     <Link underline='hover' color='#313335' href="https://github.com/sferia003">github</Link>
                     <Link underline='hover' color='#313335' href="https://www.linkedin.com/in/stephen-feria-10b99b19a">linkedin</Link>
