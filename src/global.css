@@ -1,11 +1,12 @@
 
-body {
+html, body {
   width: 100vw; /* Take up the full viewport width */
   height: 100vh; /* Take up the full viewport height */
   background-image: url("background.jpg");
   background-size: auto 100%;
   background-position: center;
   background-attachment: fixed;
+  background-color: #f5f1e8;
   overflow: hidden; /* Hide the parts of the image that exceed the container */
   margin: 0;
 }
