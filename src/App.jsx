@@ -1,111 +1,48 @@
-import * as React from "react";
+import React from 'react';
+import { styled } from '@mui/system';
+import { Typography, Divider, Link, Stack} from '@mui/material';
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
 
-import { Grid, Typography } from "@mui/material";
-import { createTheme } from "@mui/material/styles";
-import { ThemeProvider } from "@emotion/react";
-import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
-import "@fontsource/varela-round";
+const ImageContainer = styled('div')({
+  display: 'flex',
+  webkitBoxAlign: 'center',
+  height: '100%',
+  width: '100%',
+  textAlign: 'center',
+}); 
 
-import Urls from "./Urls.jsx";
-
-const theme = createTheme({
-  breakpoints: {
-    values: {
-      xs: 0,
-      sm: 400,
-      in: 600,
-      md: 900,
-      lg: 1200,
-      xl: 1536,
-      xxl: 1900,
-    },
-  },
-  typography: {
-    fontFamily: "Varela Round",
-  },
-  palette: {
-    primary: {
-      main: "#ffffff",
-    },
-    secondary: {
-      main: "#000000",
-    },
-  },
+const TextOverlay = styled('div')({
+  position: 'absolute',
+  top: '50%',
+  left: '50%',
+  transform: 'translate(-50%, -50%)',
+  color: 'white',
 });
 
+const name = "Stephen Feria"
+const description = "I study Computer Science at Purdue. I am interested in functional programming, cloud computing, and distributed systems. "
+ + "Feel free to contact me below."
 const App = () => {
-
   return (
-    <ThemeProvider theme={theme}>
-      <>
-        <Grid
-          container
-          direction="column"
-          alignItems="center"
-          justifyContent="center"
-          sx={{ minHeight: { xs: "80dvh", md: "90dvh" } }}
-        >
-          <Grid item xs={"12"}>
-            <Typography
-              sx={{
-                fontSize: {
-                  xs: "2.5rem",
-                  sm: "3.5rem",
-                  in: "4rem",
-                  md: "5rem",
-                  lg: "7rem",
-                  xl: "9rem",
-                  xxl: "10rem",
-                },
-              }}
-            >
-              Stephen Feria
-            </Typography>
-          </Grid>
-          <Grid item xs={"12"}>
-            <MoreHorizIcon
-              sx={{
-                fontSize: {
-                  xs: "1.5rem",
-                  sm: "3rem",
-                  md: "3rem",
-                  lg: "5rem",
-                  xl: "7rem",
-                  xxl: "8rem",
-                },
-              }}
-            />
-          </Grid>
-          <Grid item xs={"12"}>
-            <Typography
-              sx={{
-                fontSize: {
-                  xs: "1.5rem",
-                  sm: "2rem",
-                  in: "2.5rem",
-                  md: "3rem",
-                  lg: "3.5rem",
-                  xl: "4rem",
-                  xxl: "5rem",
-                },
-              }}
-            >
-              I build software
-            </Typography>
-          </Grid>
-        </Grid>
-        <Grid
-          container
-          alignItems="flex-start"
-          justifyContent="space-evenly"
-          sx={{ minHeight: { xs: "20dvh", md: "10dvh" } }}
-        >
-          <Grid item>
-            <Urls />
-          </Grid>
-        </Grid>
-      </>
-    </ThemeProvider>
+      <ImageContainer>
+       <TextOverlay>
+        <Card raised variant='outlined' sx={{minWidth: '15em', maxWidth: '45em', backgroundColor: '#FFFFFF'}}>
+            <CardContent>
+                <Typography sx={{paddingBottom: '1em', color: '#313335'}} variant="h4">{name}</Typography>
+                <Typography sx={{paddingBottom: '0.5em'}}variant="body1">{description}</Typography>
+                <Divider sx={{marginBottom: '0.5em'}} />
+                <Stack sx={{justifyContent: 'center'}} direction='row' spacing={2}>
+                    <Link underline='hover' color='#313335' href="mailto:sferia003@gmail.com">email</Link>
+                    <Link underline='hover' color='#313335' href="https://github.com/sferia003">github</Link>
+                    <Link underline='hover' color='#313335' href="https://www.linkedin.com/in/stephen-feria-10b99b19a">linkedin</Link>
+                    <Link underline='hover' color='#313335' href="https://drive.google.com/uc?export=download&id=1s78sLa9VClyjkDo1NB1NJx6h4Ar6qdK-">resume</Link>
+                </ Stack>
+
+            </CardContent>
+        </Card>
+       </TextOverlay>
+      </ImageContainer>
   );
 };
 
