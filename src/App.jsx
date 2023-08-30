@@ -31,7 +31,8 @@ const theme = createTheme({
       md: 900,
       lg: 1200,
       xl: 1536,
-      xll: 1900
+      xll: 1900,
+      sp: 2400
     },
   },
 });
@@ -44,12 +45,12 @@ const App = () => {
       <ThemeProvider theme={theme}>
       <ImageContainer>
        <TextOverlay>
-        <Card variant='outlined' sx={{minWidth: '15em', maxWidth: '65em', backgroundColor: '#FFFFFF'}}>
+        <Card variant='outlined' sx={{width: ['15em', '20em', '25em', '30em', '40em', '50em', '60em', '70em', '80em'], backgroundColor: '#FFFFFF'}}>
             <CardContent>
-                <Typography sx={{paddingBottom: '1em', color: '#313335', fontSize: {xs: '1.5em', ss: '1.75em', sm: '2em', lg: '2.5em', xll: '3.5em'}}} variant="h4">{name}</Typography>
-                <Typography sx={{paddingBottom: '0.5em', fontSize: {xs: '0.5em', ss: '.7em', sm: '1em', lg: '1.5em', xll: '1.75em'}}}variant="body2">{description}</Typography>
+                <Typography sx={{paddingBottom: '1em', color: '#313335', fontSize: ['1.5em', '1.75em', '2em', null, '2.5em', '3em', '3.5em', '3.75em', '4.5em']}} variant="h4">{name}</Typography>
+                <Typography sx={{paddingBottom: '0.5em', fontSize: ['0.7em', '.85em', null, '1em', '1.5em', '1.75em', '2em', '2.2em', '2.5em']}}variant="body2">{description}</Typography>
                 <Divider sx={{marginBottom: '0.5em'}} />
-                <Stack sx={{justifyContent: 'center', fontSize: {xs: '0.5em', ss: '.7em', sm: '1em', lg: '1.5em', xll: '1.75em'}}} direction='row' spacing={2}>
+                <Stack sx={{justifyContent: 'center', fontSize: ['0.7em', '.85em', null, '1em', '1.5em', '1.75em', '2em', '2.2em', '2.5em']}} direction='row' spacing={2}>
                     <Link underline='hover' color='#313335' href="mailto:sferia003@gmail.com">email</Link>
                     <Link underline='hover' color='#313335' href="https://github.com/sferia003">github</Link>
                     <Link underline='hover' color='#313335' href="https://www.linkedin.com/in/stephen-feria-10b99b19a">linkedin</Link>
