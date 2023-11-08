@@ -25,6 +25,7 @@ const theme = createTheme({
   breakpoints: {
     values: {
       xs: 0,
+      xms: 320,
       ss: 400,
       ms: 600,
       sm: 700,
@@ -45,18 +46,17 @@ const App = () => {
       <ThemeProvider theme={theme}>
       <ImageContainer>
        <TextOverlay>
-        <Card variant='outlined' sx={{width: ['15em', '20em', '25em', '30em', '40em', '50em', '60em', '70em', '80em'], backgroundColor: '#FFFFFF'}}>
+        <Card variant='outlined' sx={{width: ['15em', '18em', '20em', '25em', '30em', '40em', '50em', '60em', '70em', '90em'], backgroundColor: '#FFFFFF'}}>
             <CardContent>
-                <Typography sx={{paddingBottom: '1em', color: '#313335', fontSize: ['1.5em', '1.75em', '2em', null, '2.5em', '3em', '3.5em', '3.75em', '4.5em']}} variant="h4">{name}</Typography>
-                <Typography sx={{paddingBottom: '0.5em', fontSize: ['0.7em', '.85em', null, '1em', '1.5em', '1.75em', '2em', '2.2em', '2.5em']}}variant="body2">{description}</Typography>
+                <Typography sx={{paddingBottom: '1em', color: '#313335', fontSize: ['1.5em', '1.6em', '1.75em', '2em', null, '2.5em', '3em', '3.5em', '4em', '5em']}} variant="h4">{name}</Typography>
+                <Typography sx={{paddingBottom: '0.5em', fontSize: ['0.7em', '0.8em', '.85em', null, '1em', '1.5em', '1.75em', '2em', '2.5em', '3em']}}variant="body2">{description}</Typography>
                 <Divider sx={{marginBottom: '0.5em'}} />
-                <Stack sx={{justifyContent: 'center', fontSize: ['0.7em', '.85em', null, '1em', '1.5em', '1.75em', '2em', '2.2em', '2.5em']}} direction='row' spacing={2}>
+                <Stack sx={{justifyContent: 'center', fontSize: ['0.7em', '0.8em', '.85em', null, '1em', '1.5em', '1.75em', '2em', '2.5em', '3em']}} direction='row' spacing={2}>
                     <Link underline='hover' color='#313335' href="mailto:sferia003@gmail.com">email</Link>
                     <Link underline='hover' color='#313335' href="https://github.com/sferia003">github</Link>
                     <Link underline='hover' color='#313335' href="https://www.linkedin.com/in/stephen-feria-10b99b19a">linkedin</Link>
                     <Link underline='hover' color='#313335' href="https://drive.google.com/uc?export=download&id=1s78sLa9VClyjkDo1NB1NJx6h4Ar6qdK-">resume</Link>
                 </ Stack>
-
             </CardContent>
         </Card>
        </TextOverlay>
