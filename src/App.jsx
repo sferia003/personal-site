@@ -39,7 +39,7 @@ const theme = createTheme({
 });
 
 const name = "Stephen Feria"
-const description = "I am incoming software engineer at Netflix. I am interested in functional programming, cloud computing, and distributed systems. "
+const description = "I am an incoming software engineer at Netflix. I am interested in functional programming, cloud computing, and distributed systems. "
  + "Feel free to contact me below."
 const App = () => {
   return (
